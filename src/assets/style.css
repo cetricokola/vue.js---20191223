@@ -1,0 +1,33 @@
+body {
+  background-color: #42b983;
+}
+
+.f1 {
+  height: 70px;
+  width: 40%;
+  font-size: larger;
+  padding: 0 0 0 20px;
+}
+
+.btn {
+  background-color: #33b5e5;
+  width: 20%;
+  height: 40px;
+}
+
+.tab {
+  border: 1px solid;
+}
+
+.center {
+  width: 40%;
+  border: 1px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.center h2 {
+  padding: 0 20px 0 20px;
+}
+
+/*# sourceMappingURL=style.css.map */
