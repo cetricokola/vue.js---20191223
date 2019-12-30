@@ -1,7 +1,5 @@
 import Vue from 'vue'
 import router from 'vue-router'
-import Teachers from './components/teachers'
-import  Mypage from './components/myPage'
 
 Vue.use(router);
 
@@ -10,15 +8,19 @@ let Router = new router({
     routes:[
         {
             path: '/',
-            name: 'Mypage',
-            component: Mypage
+            name: 'Signup',
+            component: () => import ('./components/signup')
         },
         {
-            path: '/teachers',
-            name: 'Teachers',
-            component: Teachers
+            path: '/cytonn-money-market-fund',
+            name: 'Cmmf',
+            component: () => import ('./components/cmmf')
+        },
+        {
+            path: '/log-in',
+            name: 'Sigin',
+            component: () => import ('./components/signin')
         }
     ]
 })
-
 export default Router;

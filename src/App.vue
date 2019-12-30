@@ -12,6 +12,12 @@ export default {
   name: 'app',
   components: {
     Navbar
+  },
+  data: function () {
+    return{
+      brand: "Cytonn Technologies"
+    }
+
   }
 }
 </script>
