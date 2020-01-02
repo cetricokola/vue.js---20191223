@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import router from 'vue-router'
-
 Vue.use(router);
 
 let Router = new router({
@@ -9,7 +8,7 @@ let Router = new router({
         {
             path: '/',
             name: 'Signup',
-            component: () => import ('./components/signup')
+            component: () => import ('./components/authentication/signup')
         },
         {
             path: '/cytonn-money-market-fund',
@@ -19,7 +18,23 @@ let Router = new router({
         {
             path: '/log-in',
             name: 'Sigin',
-            component: () => import ('./components/signin')
+            component: () => import ('./components/authentication/signin')
+        },
+        {
+            path: '/post',
+            name: 'Post',
+            component: () => import ('./components/posts/posts')
+        },
+        {
+            path: '/get-posts',
+            name: 'ShowPost',
+            component: () => import ('./components/posts/showPosts')
+        },
+        {
+            path: '/edit_post/:id',
+            name: 'EditPost',
+            component: () => import ('./components/posts/EditPost'),
+            props: true
         }
     ]
 })

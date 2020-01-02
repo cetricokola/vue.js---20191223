@@ -8,22 +8,40 @@
             <h1 class="navbar-brand font-weight-bold">
                 <router-link to="/" class="text-white">{{this.$parent.brand}}</router-link>
             </h1>
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-                <ul class="nav ml-auto">
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03 ml-auto">
+                <ul class="nav">
                     <li class="nav-item">
                         <router-link to="/log-in" class="text-white nav-link">Login</router-link>
                     </li>
                 </ul>
-                    <button class="btn " type="submit">
-                        <router-link to="/" class="text-white">Create Account</router-link>
-                    </button>
+                <button class="btn " type="submit">
+                    <router-link to="/" class="text-white">Create Account</router-link>
+                </button>
+                <ul  class="nav">
+                    <li class="nav-item" @click="logout">
+                        <router-link to="/" class="text-white nav-link">Logout</router-link>
+                    </li>
+                </ul>
             </div>
         </nav>
     </div>
 </template>
 <script>
-    export default {
+    import router from '../router';
 
+    export default {
+        data: function () {
+            return {
+            }
+
+        },
+
+        methods: {
+            logout: function () {
+                localStorage.removeItem('token');
+                router.push('/')
+            }
+        }
     }
 </script>
 
